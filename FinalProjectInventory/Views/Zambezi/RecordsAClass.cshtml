@@ -1,0 +1,52 @@
+﻿@model IEnumerable<FinalProjectInventory.Models.AddRecordAClass>
+@{
+    ViewData["Title"] = "Records A Class";
+}
+
+<div class="container d-flex mb-4 pt-5">
+
+        <a role="button" class="btn btn-outline-info" asp-action="AddRecordA">Add Record</a>
+              <form class="d-flex flex-nowrap ms-auto">
+              <button type="submit" class="btn btn-outline-info">Search</button>
+              <input type="text" class="form-control">
+              </form>
+
+          </div>
+      <div class="container bg-light">
+      <table class="table table-bordered table-sm">
+          <tr class=" ">
+              <th>Product Id</th>
+              <th>Product_Desc</th>
+                  <th>Quantity</th>
+                  <th>Issued_By</th>
+                  <th>Verified_By</th>
+                   <th>Date_Send</th>
+                    <th>Date_Recieved</th>
+                    <th></th>
+              </tr>
+        @foreach (var data in Model)
+        {
+                  <tr>
+                      <td>@data.ProductId</td>
+                  <td>@data.ProductDescription</td>
+                      <td>@data.Quantity</td>
+                      <td>@data.IssuedBy</td>
+                       <td>@data.VerifiedBy</td>
+                      <td>@data.DateSend</td>
+                      <td>@data.DateReceived</td>
+                       <td colspan="2">
+                        <span><i class="bi bi-pencil"></i></span>
+                          <a role="button" class="btn btn-outline-danger" asp-route-id="@data.ProductId" asp-action="Download">Download</a>
+                       </td>
+                  </tr>
+        }
+          </table>
+      </div>
+      <div class="container mt-3">
+      <div class="row float-end">
+          <div class="col ">
+              <a role="button" class="btn btn-outline-info">Download</a>
+              </div>
+          </div>
+      </div>
+

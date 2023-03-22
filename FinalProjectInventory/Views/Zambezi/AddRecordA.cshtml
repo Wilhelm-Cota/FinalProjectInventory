@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "Add Record";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="height:600px">
+        <form action="AddRecordA" enctype="multipart/form-data" method="post" class="border p-5">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="first">Product Description:</label>
+                        <input type="text" name="ProductDescription" id="first" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="first">Quantity:</label>
+                        <input type="text" name="Quantity" id="first" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="first">Issued By:</label>
+                        <input type="text" name="IssuedBy" id="first" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="first">Verified By:</label>
+                        <input type="text" name="VerifiedBy" id="first" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="first">Date Send:</label>
+                        <input type="date" name="DateSend" id="first" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="first">Date Recieved:</label>
+                        <input type="date" name="DateReceived" id="first" class="form-control">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row pb-4">
+                <div class="col">
+                    <label for="fileType">Upload File:</label>
+                    <input type="file" name="FileData" id="fileType" class="form-control">
+                 </div> 
+            </div>
+                <div class="row">
+                    <div class="col"> 
+
+                        <a role="button" class="btn btn-outline-primary" asp-action="RecordsAClass">Back</a>
+                    </div>
+                    <div class="col">
+
+                        <button type="submit" class="btn btn-outline-success">Submit</button>
+                    </div>
+            </div>
+        </form>
+    </div>
